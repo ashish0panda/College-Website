@@ -1,0 +1,11 @@
+.img{
+	float:left;
+	height:120px;
+	width:120px;
+	margin-right:10px;
+}
+p{
+	color:red;
+	font-family: "Comic Sans MS", cursive, sans-serif; 
+	text-shadow: 2px 2px #FFF;
+}

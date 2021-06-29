@@ -1,0 +1,76 @@
+body{
+	margin: 0px;
+	border: 0px;
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment:fixed;
+}
+.upper{
+	height:116px;
+	display:block;
+	position:sticky;
+	top:0;
+	left:0;
+	z-index:1;
+	}
+.logo{
+	width:9%;
+	height:100px;
+	float:left;
+}
+.logoimg{
+	width: 100%;
+	height:116px;
+	
+}
+.college_name{
+    width:91%;
+	height:70px;
+	float:left;
+	padding-top:0px;
+	background: linear-gradient(to bottom right, red, black);
+}
+.name{
+	padding-top:0px;
+	color:#ECF302;
+}
+.menu{
+	width:91%;
+	height:30px;
+	float:left;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.facebook{
+	position:absolute;
+	right:15px;
+	top:77px;
+	display:block;
+	text-align:center;
+	height:30px;
+}
