@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="icon" href="images/IMG20190112113706 (1).jpg" type="images/gif" size="18*18">
+    <title>HOME | RKCIT&M, SAMBALPUR</title>
+	<link rel="stylesheet" href="css/basic.css" type="text/css">
+	<link rel="stylesheet" href="css/home_page.css" type="text/css">
+	<script src="java_script/home.js"></script>
+  </head>
+  <body background="images/Wallpapers 1366x768.jpg">
+	<div class="upper">
+	  <div class="logo">
+	    <img src="images/IMG20190112113706 (1).jpg" height="33%" class="logoimg">
+	  </div>
+	  <div class="college_name">
+	    <h1 class="name">RAJKUMAR COLLEGE OF INFORMATION TECHNOLOGY AND MANAGEMENT</h1>
+	  </div>
+	  <div class="menu">
+	    <ul>
+          <li><a class="active" href="">Home</a></li>
+          <li><a href="activities.html">Curriculum</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+		  <li><a href="teacher.html">Teachers</a></li>
+		  <li><a href="login.html">LOGIN</a></li>
+		  <a href="https://www.facebook.com/nicesbp" target="_blank"><img class="facebook" src="images/facebook.png"></a>
+        </ul>
+	  </div>
+	</div>
+	<div onload="slide()" class="slide">
+      <img class="mySlides" src="images/2.jpg" >
+      <img class="mySlides" src="images/Education-Wallpapers-HD.jpg" >
+      <img class="mySlides" src="images/Homework-students-HD-picture.jpg">
+	  <a href="#about" style="text-decoration:none;color:white"><button class="slide_btn">WELCOME</button></a>
+    </div>
+    <script src="java_script/home.js"></script>
+	<div ></div>
+	<div id="about" class="abt">
+	<p align="center" style="color:red; text-decoration:underline; font-size:30px; font-weight:bolder">ABOUT US</P>
+	<div style="background:black;">
+	 <table>
+	 <tr width=60% style="margin:10px"><td >
+	<p class="text">Hearty welcome to RKCIT which has already set a glorious tradition of success. We are committed to make your learning experience exciting, stimulating and rewarding. Without doubt, RKCIT is the FIRST CHOICE in this part of Odisha. We believe in creating a perfect learning environment by encouraging innovative, affordable, quality teaching and utilizing technology to enable our students to realize their dreams and aspirations. We have already earned a great reputation for high quality teaching in a learner-friendly, caring, supportive, residence based setting which is conducive to learning. We nurture talents through continual testing, evolution and counseling to maximize their potential to get success. The talented faculty at RKCIT, many of whom are outstanding retired professors are our greatest assets.</p></td>
+	  <td><img src="images/IMG20190112113706 (1).jpg" style="height:230px;" align="right"></td>
+	  </tr>
+	 </table>
+	 </div>
+	</div>
+	<br/>
+	<h1 align="center" style="color:red; text-decoration:underline;"> WANT TO TAKE ADMISSION!</h1>
+	<div class="form">
+	<form align="center" method="post" action="http://127.0.0.1/php/connect.php">
+<fieldset>
+<input type="text" name="name" placeholder="Your Name *">
+<input type="email" name="email" placeholder="Your Email *">
+<input type="tel" name="phone" placeholder="Your number *" maxlength="10">
+<textarea name="commt" placeholder="About yourself"></textarea>
+<label for="course">Interests:</label>
+<select id="course" name="course" name="field4">
+  <option value="bba">BBA</option>
+  <option value="bca">BCA</option>
+ </select>      
+</fieldset>
+<input type="submit" value="Apply">
+</form>
+</div>
+<div class="map">
+<h1 align="center" style="color:red; text-decoration:underline;"> REACH TO US</h1>
+<div id="googleMap" style="width:100%;height:500px;"></div>
+
+<script>
+
+function myMap() {
+const center={ lat: 21.4852924, lng: 83.9759307};
+var mapProp= {
+  center:new google.maps.LatLng(center),
+  zoom:10,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var myTrip = [{lat:28.527582, lng:77.0688975},{lat:19.0825223, lng:72.7410978},center,{lat:22.6763858,lng:88.0495275}];
+
+//Marker
+var marker = new google.maps.Marker({
+position: center,
+animation:google.maps.Animation.BOUNCE,
+//title:"Ashish house"
+});
+marker.setMap(map);
+
+//inf0
+var info= new google.maps.InfoWindow({
+	content:"Ashish Home"
+});
+info.open(map,marker);
+
+//polyline
+/*
+var flightPath = new google.maps.Polyline({
+  path:myTrip,
+  geodesic: true,
+  strokeColor:"#FF0000",
+  strokeOpacity:0.8,
+  strokeWeight:2
+});
+flightPath.setMap(map);
+*/
+//polygon
+/*
+var flightPath = new google.maps.Polygon({
+	path:myTrip,
+	geodesic:true,
+	strokeColor:"#FF0000",
+	strokeOpacity:1.0,
+	strokeWeight:2,
+	fillColor:"#00ff00",
+	fillOpacity:0.4
+});
+flightPath.setMap(map);
+*/
+//circle
+/*
+var myArea = new google.maps.Circle({
+	center:new google.maps.LatLng(center),
+	radius:20000,
+	strokeColor:"#FF0000",
+	strokeOpacity:0.4,
+	strokeWeight:2,
+	fillColor:"#00ff00",
+	fillOpacity:0.4
+})
+myArea.setMap(map);*/
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=myMap"></script>
+</div>
+  </body>
+</html>
